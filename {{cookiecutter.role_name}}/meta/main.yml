@@ -1,0 +1,34 @@
+galaxy_info:
+  author: {{ cookiecutter.author }}
+  description: {{ cookiecutter.description }}
+  company: {{ cookiecutter.company }}
+{%- if cookiecutter.issue_tracker_url %}
+  issue_tracker_url: {{ cookiecutter.issue_tracker_url }}
+{%- endif %}
+  license: {{ cookiecutter.license }}
+  min_ansible_version: {{ cookiecutter.min_ansible_version }}
+{% if cookiecutter.platforms %}
+  platforms:
+  {%- for i in cookiecutter.platforms.split(';') %}
+    - name: {{ i.split(':')[0] }}
+      versions:
+    {%- for j in (i.split(':')[1]).split(',') %}
+        - {{ j.strip() }}
+    {%- endfor %}
+  {%- endfor %}
+{%- endif %}
+
+  galaxy_tags:{{ ' []' if not cookiecutter.galaxy_tags else ''}}
+{%- if cookiecutter.galaxy_tags %}
+  {%- for i in cookiecutter.galaxy_tags.split(',') %}
+    - {{ i.strip() }}
+  {%- endfor %}
+{%- endif %}
+
+
+dependencies:{{ ' []' if not cookiecutter.dependencies else ''}}
+{%- if cookiecutter.dependencies %}
+  {%- for i in cookiecutter.dependencies.split(',') %}
+  - {{ i.strip() }}
+  {%- endfor %}
+{%- endif %}

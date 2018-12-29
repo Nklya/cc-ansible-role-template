@@ -1,0 +1,45 @@
+{
+  "role_name": "test_role",
+  "defaults_needed": [
+    "False",
+    "True"
+  ],
+  "docs_needed": [
+    "False",
+    "True"
+  ],
+  "files_needed": [
+    "False",
+    "True"
+  ],
+  "handlers_needed": [
+    "False",
+    "True"
+  ],
+  "templates_needed": [
+    "False",
+    "True"
+  ],
+  "vars_needed": [
+    "False",
+    "True"
+  ],
+  "tests_needed": [
+    "False",
+    "True"
+  ],
+  "author": "Your Name (your.email@email.address)",
+  "company": "Your company",
+  "description": "What role does",
+  "issue_tracker_url": "",
+  "min_ansible_version": "2.5",
+  "platforms": "Ubuntu:xenial,bionic",
+  "galaxy_tags": "",
+  "dependencies": "",
+  "license": [
+    "MIT",
+    "Apache",
+    "GPLv2",
+    "All rights reserved"
+  ]
+}

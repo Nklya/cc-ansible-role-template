@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  hosts: testing
+  name: ansible_playbook
+  playbook: test/default.yml
+  # requirements_path: test/requirements.yml
+  require_chef_for_busser: false
+  require_ruby_for_busser: false
+
+verifier:
+  name: inspec
+  # attrs:
+  #   - defaults/main.yml
+
+platforms:
+  - name: ubuntu-18.04
+  - name: ubuntu-16.04
+
+suites:
+  - name: default

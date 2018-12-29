@@ -1,0 +1,8 @@
+---
+- name: wrapper playbook for kitchen testing
+  hosts: testing
+  vars:
+    docker_install_compose: false
+  roles:
+    # - geerlingguy.docker
+    - px-chrome

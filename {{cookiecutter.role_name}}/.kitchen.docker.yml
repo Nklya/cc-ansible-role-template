@@ -1,0 +1,35 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+  privileged: true
+
+
+provisioner:
+  hosts: testing
+  name: ansible_playbook
+  playbook: test/default.yml
+  # requirements_path: test/requirements.yml
+  require_chef_for_busser: false
+  require_ruby_for_busser: false
+
+verifier:
+  name: inspec
+  attrs:
+    - defaults/main.yml
+
+platforms:
+  - name: ubuntu-18.04
+    driver_config:
+      image: ubuntu:18.04
+      run_command: '/sbin/init'
+      provision_command:
+      # ss for Inspec
+        - apt-get install -y iproute2
+  - name: ubuntu-16.04
+    driver_config:
+      image: ubuntu:16.04
+      run_command: '/sbin/init'
+
+suites:
+  - name: default

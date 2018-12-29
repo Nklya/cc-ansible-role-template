@@ -1,0 +1,10 @@
+language: python
+dist: xenial
+
+install:
+  - pip install cookiecutter
+
+script:
+  - python --version
+  - cookiecutter --version
+  - cookiecutter --no-input .
