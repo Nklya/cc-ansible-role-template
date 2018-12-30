@@ -1,6 +1,6 @@
 # Cookiecutter Ansible role template
 
-[![Build Status](https://img.shields.io/travis/cndies/cc-ansible-role-template.svg)](https://travis-ci.com/cndies/cc-ansible-role-template)
+[![Build Status](https://travis-ci.com/cndies/cc-ansible-role-template.svg?branch=master)](https://travis-ci.com/cndies/cc-ansible-role-template)
 
 This template can be used to generate customized ansible role.
 
