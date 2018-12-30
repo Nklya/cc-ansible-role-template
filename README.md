@@ -23,6 +23,8 @@ This template can be used to generate customized ansible role.
 * `galaxy_tags` - List of tags (separated by `,`)
 * `dependencies` - List of dependencies (separated by `,`)
 
+P.S. (Note that if you want to use repository name like `ansible-role-xxx`, don't put `ansible-role-` to role_name). And you cannot use `-` in role name.
+
 ## How to use
 
 1. Install cookiecutter `pip install cookiecutter`

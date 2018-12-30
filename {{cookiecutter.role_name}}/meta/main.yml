@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: {{ cookiecutter.role_name }}
   author: {{ cookiecutter.author }}
   description: {{ cookiecutter.description }}
   company: {{ cookiecutter.company }}
